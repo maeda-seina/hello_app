@@ -7,8 +7,8 @@ class UsersController < ApplicationController
   def show
     @user = User.find_by(id: params[:id])
     if @user.nil?
-      render action: "index"
-      # redirect_to action: :index
+      # render action: "index"
+      redirect_to action: :index
     end
   end
 
